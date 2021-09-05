@@ -1,4 +1,4 @@
-package com.example.demo.pojo;
+package com.example.demo.entity;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity(name = "Student") @Table(name = "student", uniqueConstraints = {
         @UniqueConstraint(name = "student_email_unique",
-                columnNames = "email")}) @Data public class Student {
+                columnNames = "email")}) @Data public class StudentEntity {
     @Id @SequenceGenerator(name = "student_sequence",
             sequenceName = "student_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
